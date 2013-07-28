@@ -1,0 +1,56 @@
+<html>
+  <head>
+    <style>
+      body {
+        width: 200px;
+        height: 200px;
+      }
+      .container {
+        margin: 0px auto;
+      }
+      ul {
+        list-style: none;
+        padding-left: 0px;
+      }
+      table {
+        padding-left: 20px;
+      }
+      td input {
+        width: 50px;
+      }
+    </style>
+    <script src="jquery.js"></script>
+    <script src="layout.js"></script>
+    <script src="grid.js"></script>
+    <script src="popup.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <ul>
+        <li><input id="checkbox-layout" type="checkbox">Enable Layout tool</li>
+        <li>
+          <input id="checkbox-grid" type="checkbox" checked>Enable Grid tool
+          <table>
+            <tr>
+              <td>Page Width</td>
+              <td><input id="input-page-width" type="text" value="960"></td>
+            </tr>
+            <tr>
+              <td>Column Width</td>
+              <td><input id="input-col-width" type="text" value="60"></td>
+            </tr>
+            <tr>
+              <td>Offset</td>
+              <td><input id="input-offset" type="text" value="10"></td>
+            </tr>
+            <tr>
+              <td>Column Distance</td>
+              <td><input id="input-col-dist" type="text" value="20"></td>
+            </tr>
+          </table>
+        </li>
+      </ul>
+      <button class="draw-btn">Draw!</button>
+    </div>
+  </body>
+</html>
