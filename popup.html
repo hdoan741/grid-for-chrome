@@ -27,30 +27,31 @@
   <body>
     <div class="container">
       <ul>
-        <li><input id="checkbox-layout" type="checkbox">Enable Layout tool</li>
+        <li><input id="checkbox-layout" class="hdm-option" type="checkbox">Enable Layout tool</li>
         <li>
-          <input id="checkbox-grid" type="checkbox" checked>Enable Grid tool
+          <input id="checkbox-grid" class="hdm-option" type="checkbox" checked>Enable Grid tool
           <table>
             <tr>
-              <td>Page Width</td>
-              <td><input id="input-page-width" type="text" value="960"></td>
+              <td>Number of Column</td>
+              <td><input id="input-col-num" class="hdm-option" type="text" value="12"></td>
             </tr>
             <tr>
               <td>Column Width</td>
-              <td><input id="input-col-width" type="text" value="60"></td>
+              <td><input id="input-col-width" class="hdm-option" type="text" value="60"></td>
             </tr>
             <tr>
               <td>Offset</td>
-              <td><input id="input-offset" type="text" value="10"></td>
+              <td><input id="input-offset" class="hdm-option" type="text" value="10"></td>
             </tr>
             <tr>
               <td>Column Distance</td>
-              <td><input id="input-col-dist" type="text" value="20"></td>
+              <td><input id="input-col-dist" class="hdm-option" type="text" value="20"></td>
             </tr>
           </table>
         </li>
       </ul>
       <button class="draw-btn">Draw!</button>
+      <a class="reset-btn" href='#'>Reset Options</a>
     </div>
   </body>
 </html>

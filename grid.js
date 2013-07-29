@@ -2,23 +2,26 @@ function removeGrid() {
   $('#hdm-grid-container').remove();
 }
 
-function drawGrid(width, step, gap, leftmargin){
+function drawGrid(colNum, step, gap, margin){
   // remove the old grid
   removeGrid();
 
-  var gridWidth = width || 960;
+  colNum = colNum || 12;
   var gridStep = step || 60;
   var gridGap = gap || 20;
-  var gridMargin = leftmargin || 10;
+  var gridMargin = margin || 10;
+  var gridWidth = colNum * gridStep + (colNum - 1) * gridGap + 2 * gridMargin;;
 
   var docHeight = $(document).height();
   var docWidth = $(document).width();
 
-  var buildGrid = function(width, step, gap, leftmargin) {
+  var buildGrid = function(num, step, gap, leftmargin) {
 
     var grid = $('<div>');
 
-    for (var pos = leftmargin; pos + step < width; pos += step + gap ) {
+    var pos = leftmargin;
+    for (var i = 0; i < num; i++) {
+      var pos = leftmargin + (step + gap) * i;
       var col = $('<div>');
       $(col).width(step);
       $(col).height(docHeight);
@@ -32,9 +35,7 @@ function drawGrid(width, step, gap, leftmargin){
     return grid;
   }
 
-  var grid = buildGrid(gridWidth, gridStep, gridGap, gridMargin);
-
-  console.log(docWidth);
+  var grid = buildGrid(colNum, gridStep, gridGap, gridMargin);
 
   $(grid).css('position', 'absolute');
   $(grid).css('top', '0');
