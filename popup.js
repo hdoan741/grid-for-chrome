@@ -30,7 +30,7 @@ function resetOptions() {
   localStorage['colNum'] = 12;
   localStorage['colWidth'] = 60;
   localStorage['colDist'] = 20;
-  localStorage['offset'] = 10;
+  localStorage['offset'] = 0;
   loadOptions();
 }
 

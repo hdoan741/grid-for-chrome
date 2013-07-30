@@ -10,7 +10,7 @@ function drawGrid(colNum, step, gap, margin){
   var gridStep = step || 60;
   var gridGap = gap || 20;
   var gridMargin = margin || 10;
-  var gridWidth = colNum * gridStep + (colNum - 1) * gridGap + 2 * gridMargin;;
+  var gridWidth = colNum * gridStep + (colNum - 1) * gridGap + gridMargin;
 
   var docHeight = $(document).height();
   var docWidth = $(document).width();
